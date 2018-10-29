@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Ubuntu packages
+    shell: mkdir ~/AnsibleTest44
+    when: ansible_os_family == "Debian"
+    ignore_errors: yes
+
+  - name: Linux packages
+    shell: mkdir ~/AnsibleTest11
+    when: ansible_os_family == "RedHat"
+    ignore_errors: yes
